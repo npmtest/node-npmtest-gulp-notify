@@ -1,7 +1,5 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <title>Code coverage report for node-npmtest-gulp-notify/gulp-notify/lib/notify.js</title>
+<html lang="en"><head>
+    <title>Code coverage report for node-npmtest-gulp-notify/node_modules/gulp-notify/lib/notify.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -194,7 +192,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-gulp-notify">npmtest-gulp-notify (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-gulp-notify/gulp-notify/lib/notify.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-gulp-notify/node_modules/gulp-notify/lib/notify.js</span></h1>
     <h2>
         
         Statements: <span class="metric">14.29% <small>(8 / 56)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -210,11 +208,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-gulp-notify/gulp-notify/lib/</a> &#187; notify.js</div>
+    <div class="path"><a href="../../../../index.html">All files</a> » <a href="index.html">node-npmtest-gulp-notify/node_modules/gulp-notify/lib/</a> » notify.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tr><td class="line-count">1
+<tbody><tr><td class="line-count">1
 2
 3
 4
@@ -429,108 +427,109 @@ var report = require('./report');
 var extra = require('./extra_api');
 var notifier = require('node-notifier');
 &nbsp;
-module.exports = <span class="fstat-no" title="function not covered" >function (options) {</span>
-<span class="cstat-no" title="statement not covered" >  var reporter;</span>
-<span class="cstat-no" title="statement not covered" >  var lastFile = null;</span>
+module.exports = <span class="fstat-no" title="function not covered">function (options) {</span>
+<span class="cstat-no" title="statement not covered">  var reporter;</span>
+<span class="cstat-no" title="statement not covered">  var lastFile = null;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  options = options || {};</span>
-<span class="cstat-no" title="statement not covered" >  var templateOptions = options.templateOptions || {};</span>
+<span class="cstat-no" title="statement not covered">  options = options || {};</span>
+<span class="cstat-no" title="statement not covered">  var templateOptions = options.templateOptions || {};</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (options.notifier) {</span>
-<span class="cstat-no" title="statement not covered" >    reporter = options.notifier;</span>
+<span class="cstat-no" title="statement not covered">  if (options.notifier) {</span>
+<span class="cstat-no" title="statement not covered">    reporter = options.notifier;</span>
   } else {
-<span class="cstat-no" title="statement not covered" >    if (options.host || options.appName || options.port) {</span>
-<span class="cstat-no" title="statement not covered" >      notifier = new notifier.Notification({</span>
+<span class="cstat-no" title="statement not covered">    if (options.host || options.appName || options.port) {</span>
+<span class="cstat-no" title="statement not covered">      notifier = new notifier.Notification({</span>
         host: options.host || 'localhost',
         appName: options.appName || 'gulp-notify',
         port: options.port || '23053'
       });
     }
-<span class="cstat-no" title="statement not covered" >    reporter = notifier.notify.bind(notifier);</span>
+<span class="cstat-no" title="statement not covered">    reporter = notifier.notify.bind(notifier);</span>
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  function notify (file, enc, callback) {</span>
-<span class="cstat-no" title="statement not covered" >    var stream = this;</span>
+<span class="fstat-no" title="function not covered">  function notify (file, enc, callback) {</span>
+<span class="cstat-no" title="statement not covered">    var stream = this;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    report(reporter, file, options, templateOptions, <span class="fstat-no" title="function not covered" >function (err) {</span></span>
-<span class="cstat-no" title="statement not covered" >      logError(err, stream);</span>
+<span class="cstat-no" title="statement not covered">    report(reporter, file, options, templateOptions, <span class="fstat-no" title="function not covered">function (err) {</span></span>
+<span class="cstat-no" title="statement not covered">      logError(err, stream);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      if (options.emitError) {</span>
-<span class="cstat-no" title="statement not covered" >        stream.push(file);</span>
-<span class="cstat-no" title="statement not covered" >        return callback();</span>
+<span class="cstat-no" title="statement not covered">      if (options.emitError) {</span>
+<span class="cstat-no" title="statement not covered">        stream.push(file);</span>
+<span class="cstat-no" title="statement not covered">        return callback();</span>
       }
     });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (!options.emitError) {</span>
-<span class="cstat-no" title="statement not covered" >      stream.push(file);</span>
-<span class="cstat-no" title="statement not covered" >      return callback();</span>
+<span class="cstat-no" title="statement not covered">    if (!options.emitError) {</span>
+<span class="cstat-no" title="statement not covered">      stream.push(file);</span>
+<span class="cstat-no" title="statement not covered">      return callback();</span>
     }
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (!options.onLast) {</span>
-<span class="cstat-no" title="statement not covered" >    return through.obj(notify);</span>
+<span class="cstat-no" title="statement not covered">  if (!options.onLast) {</span>
+<span class="cstat-no" title="statement not covered">    return through.obj(notify);</span>
   }
 &nbsp;
   // Only send notification on the last file.
-<span class="cstat-no" title="statement not covered" >  return through.obj(<span class="fstat-no" title="function not covered" >function (file, enc, callback) {</span></span>
-<span class="cstat-no" title="statement not covered" >    lastFile = file;</span>
-<span class="cstat-no" title="statement not covered" >    this.push(file);</span>
-<span class="cstat-no" title="statement not covered" >    callback();</span>
-  }, <span class="fstat-no" title="function not covered" >function (callback) {</span>
-<span class="cstat-no" title="statement not covered" >    var stream = this;</span>
+<span class="cstat-no" title="statement not covered">  return through.obj(<span class="fstat-no" title="function not covered">function (file, enc, callback) {</span></span>
+<span class="cstat-no" title="statement not covered">    lastFile = file;</span>
+<span class="cstat-no" title="statement not covered">    this.push(file);</span>
+<span class="cstat-no" title="statement not covered">    callback();</span>
+  }, <span class="fstat-no" title="function not covered">function (callback) {</span>
+<span class="cstat-no" title="statement not covered">    var stream = this;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (!lastFile) {</span>
-<span class="cstat-no" title="statement not covered" >      return callback();</span>
+<span class="cstat-no" title="statement not covered">    if (!lastFile) {</span>
+<span class="cstat-no" title="statement not covered">      return callback();</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    report(reporter, lastFile, options, templateOptions, <span class="fstat-no" title="function not covered" >function (err) {</span></span>
-<span class="cstat-no" title="statement not covered" >      logError(err, stream);</span>
-<span class="cstat-no" title="statement not covered" >      if (options.emitError) {</span>
-<span class="cstat-no" title="statement not covered" >        return callback();</span>
+<span class="cstat-no" title="statement not covered">    report(reporter, lastFile, options, templateOptions, <span class="fstat-no" title="function not covered">function (err) {</span></span>
+<span class="cstat-no" title="statement not covered">      logError(err, stream);</span>
+<span class="cstat-no" title="statement not covered">      if (options.emitError) {</span>
+<span class="cstat-no" title="statement not covered">        return callback();</span>
       }
     });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    lastFile = null; </span>// reset
-<span class="cstat-no" title="statement not covered" >    if (!options.emitError) {</span>
-<span class="cstat-no" title="statement not covered" >      return callback();</span>
+<span class="cstat-no" title="statement not covered">    lastFile = null; </span>// reset
+<span class="cstat-no" title="statement not covered">    if (!options.emitError) {</span>
+<span class="cstat-no" title="statement not covered">      return callback();</span>
     }
   });
 &nbsp;
-<span class="fstat-no" title="function not covered" >  function logError (err, stream) {</span>
-<span class="cstat-no" title="statement not covered" >    if (!err) <span class="cstat-no" title="statement not covered" >return;</span></span>
+<span class="fstat-no" title="function not covered">  function logError (err, stream) {</span>
+<span class="cstat-no" title="statement not covered">    if (!err) <span class="cstat-no" title="statement not covered">return;</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    var isGrowl = notifier &amp;&amp; notifier instanceof notifier.Growl;</span>
-<span class="cstat-no" title="statement not covered" >    var isEcon = err.message.indexOf('ECONNREFUSED') !== -1;</span>
-<span class="cstat-no" title="statement not covered" >    var dropMessage = isGrowl &amp;&amp; isEcon;</span>
+<span class="cstat-no" title="statement not covered">    var isGrowl = notifier &amp;&amp; notifier instanceof notifier.Growl;</span>
+<span class="cstat-no" title="statement not covered">    var isEcon = err.message.indexOf('ECONNREFUSED') !== -1;</span>
+<span class="cstat-no" title="statement not covered">    var dropMessage = isGrowl &amp;&amp; isEcon;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (dropMessage) {</span>
-<span class="cstat-no" title="statement not covered" >      return extra.logError({</span>
+<span class="cstat-no" title="statement not covered">    if (dropMessage) {</span>
+<span class="cstat-no" title="statement not covered">      return extra.logError({</span>
         title: 'Info',
         message: 'No notification system installed.'
       });
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (options.emitError) <span class="cstat-no" title="statement not covered" >return stream.emit('error', err);</span></span>
+<span class="cstat-no" title="statement not covered">    if (options.emitError) <span class="cstat-no" title="statement not covered">return stream.emit('error', err);</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    extra.logError({</span>
+<span class="cstat-no" title="statement not covered">    extra.logError({</span>
       title: 'Error in notifier',
       message: err
     }, true);
   }
 };
 &nbsp;
-module.exports.on = <span class="fstat-no" title="function not covered" >function (event, fn) {</span>
-<span class="cstat-no" title="statement not covered" >  if (!notifier) <span class="cstat-no" title="statement not covered" >return;</span></span>
-<span class="cstat-no" title="statement not covered" >  return notifier.on(event, <span class="fstat-no" title="function not covered" >function (notifyObject, options) {</span></span>
-<span class="cstat-no" title="statement not covered" >    return fn(options);</span>
+module.exports.on = <span class="fstat-no" title="function not covered">function (event, fn) {</span>
+<span class="cstat-no" title="statement not covered">  if (!notifier) <span class="cstat-no" title="statement not covered">return;</span></span>
+<span class="cstat-no" title="statement not covered">  return notifier.on(event, <span class="fstat-no" title="function not covered">function (notifyObject, options) {</span></span>
+<span class="cstat-no" title="statement not covered">    return fn(options);</span>
   });
 };
 &nbsp;
 &nbsp;</pre></td></tr>
-</table></pre>
+</tbody></table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 06:23:59 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Sun Apr 16 2017 08:22:15 GMT+0000 (UTC)</div>
 </div>
-</body>
-</html>
+
+
+</body></html>
