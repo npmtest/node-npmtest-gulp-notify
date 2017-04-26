@@ -1,6 +1,6 @@
 # npmtest-gulp-notify
 
-#### test coverage for  [gulp-notify (v3.0.0)](https://github.com/mikaelbr/gulp-notify)  [![npm package](https://img.shields.io/npm/v/npmtest-gulp-notify.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-gulp-notify) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-gulp-notify.svg)](https://travis-ci.org/npmtest/node-npmtest-gulp-notify)
+#### basic test coverage for  [gulp-notify (v3.0.0)](https://github.com/mikaelbr/gulp-notify)  [![npm package](https://img.shields.io/npm/v/npmtest-gulp-notify.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-gulp-notify) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-gulp-notify.svg)](https://travis-ci.org/npmtest/node-npmtest-gulp-notify)
 
 #### gulp plugin to send messages based on Vinyl Files or Errors to Mac OS X, Linux or Windows using the node-notifier module. Fallbacks to Growl or simply logging
 
@@ -10,7 +10,7 @@
 |--:|:--|
 | coverage : | [![istanbul-coverage](https://npmtest.github.io/node-npmtest-gulp-notify/build/coverage.badge.svg)](https://npmtest.github.io/node-npmtest-gulp-notify/build/coverage.html/index.html)|
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-gulp-notify/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-gulp-notify/build/test-report.html)|
-| build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-gulp-notify/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-gulp-notify/tree/gh-pages/build)|
+| test-server-github : | [![github.com test-server](https://npmtest.github.io/node-npmtest-gulp-notify/GitHub-Mark-32px.png)](https://npmtest.github.io/node-npmtest-gulp-notify/build/app/index.html) | | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-gulp-notify/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-gulp-notify/tree/gh-pages/build)|
 
 - [https://npmtest.github.io/node-npmtest-gulp-notify/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-gulp-notify/build/coverage.html/index.html)
 
@@ -96,7 +96,8 @@
         "gulp": "gulp --gulpfile ./examples/gulpfile.js",
         "test": "mocha -R spec"
     },
-    "version": "3.0.0"
+    "version": "3.0.0",
+    "bin": {}
 }
 ```
 
